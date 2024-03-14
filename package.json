@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "cypress run"
+    "test": "cypress open"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.9.1",

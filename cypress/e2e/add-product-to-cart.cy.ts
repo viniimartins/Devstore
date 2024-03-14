@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('add product to cart', () => {
   beforeEach(() => {
     cy.visit('/')
   })
@@ -23,7 +23,10 @@ describe('template spec', () => {
   })
 
   it('should be able to search for a product and add it to the cart', () => {
-    cy.searchByQuery('moletom')
+    // cy.searchByQuery('moletom')
+
+    cy.visit('/')
+    cy.get('input[name=q]').type('moletom').parent('form').submit()
 
     cy.get('a[href^="/product"]').first().click()
 
